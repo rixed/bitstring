@@ -1,0 +1,1743 @@
+------------------------------------------------------------------------
+r192 | richard.wm.jones@gmail.com | 2012-01-17 13:24:46 +0000 (Tue, 17 Jan 2012) | 3 lines
+Changed paths:
+   M /trunk/MANIFEST
+
+Update MANIFEST.
+
+
+------------------------------------------------------------------------
+r191 | richard.wm.jones@gmail.com | 2012-01-17 13:21:57 +0000 (Tue, 17 Jan 2012) | 3 lines
+Changed paths:
+   M /trunk/.depend
+   M /trunk/configure.ac
+
+Version 2.0.3.
+
+
+------------------------------------------------------------------------
+r190 | richard.wm.jones@gmail.com | 2012-01-17 13:20:53 +0000 (Tue, 17 Jan 2012) | 5 lines
+Changed paths:
+   M /trunk/bitstring.ml
+   A /trunk/tests/test_91_concat.ml
+
+Fix concatenation of non-aligned bitstrings (thanks Phil Tomson).
+
+This commit includes a regression test.
+
+
+------------------------------------------------------------------------
+r189 | richard.wm.jones@gmail.com | 2012-01-17 13:02:18 +0000 (Tue, 17 Jan 2012) | 5 lines
+Changed paths:
+   M /trunk/pa_bitstring.ml
+   A /trunk/tests/test_90_bind_as.ml
+
+In a '{...} as foo' binding, save the original bitstring offset and
+length as 'foo'.  Before we were saving the running offset and length.
+This commit also adds a regression test.  (Bug found by Matej Kosik).
+
+
+------------------------------------------------------------------------
+r188 | richard.wm.jones@gmail.com | 2012-01-17 12:44:36 +0000 (Tue, 17 Jan 2012) | 3 lines
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/README
+
+Add 'make check' as a synonym for 'make test'.
+
+
+------------------------------------------------------------------------
+r187 | richard.wm.jones@gmail.com | 2012-01-17 12:39:09 +0000 (Tue, 17 Jan 2012) | 3 lines
+Changed paths:
+   D /trunk/tests/01_load.ml
+   D /trunk/tests/02_run.ml
+   D /trunk/tests/10_match_bits.ml
+   D /trunk/tests/11_match_ints.ml
+   D /trunk/tests/15_extract_int.ml
+   D /trunk/tests/18_extract_32_64_int.ml
+   D /trunk/tests/20_varsize.ml
+   D /trunk/tests/30_bitbuffer.ml
+   D /trunk/tests/31_bitstring_concat.ml
+   D /trunk/tests/32_bitstring_compare.ml
+   D /trunk/tests/33_substring.ml
+   D /trunk/tests/34_takebits.ml
+   D /trunk/tests/35_load_from_file.ml
+   D /trunk/tests/40_endianexpr.ml
+   D /trunk/tests/50_named_pattern.ml
+   D /trunk/tests/51_open_pattern.ml
+   D /trunk/tests/60_simple_offset.ml
+   D /trunk/tests/61_offset_string.ml
+   D /trunk/tests/62_offset_padding.ml
+   D /trunk/tests/65_save_offset_to.ml
+   D /trunk/tests/70_check_and_bind.ml
+   D /trunk/tests/80_hexdump.ml
+   A /trunk/tests/test_01_load.ml (from /trunk/tests/01_load.ml:186)
+   A /trunk/tests/test_02_run.ml (from /trunk/tests/02_run.ml:186)
+   A /trunk/tests/test_10_match_bits.ml (from /trunk/tests/10_match_bits.ml:186)
+   A /trunk/tests/test_11_match_ints.ml (from /trunk/tests/11_match_ints.ml:186)
+   A /trunk/tests/test_15_extract_int.ml (from /trunk/tests/15_extract_int.ml:186)
+   A /trunk/tests/test_18_extract_32_64_int.ml (from /trunk/tests/18_extract_32_64_int.ml:186)
+   A /trunk/tests/test_20_varsize.ml (from /trunk/tests/20_varsize.ml:186)
+   A /trunk/tests/test_30_bitbuffer.ml (from /trunk/tests/30_bitbuffer.ml:186)
+   A /trunk/tests/test_31_bitstring_concat.ml (from /trunk/tests/31_bitstring_concat.ml:186)
+   A /trunk/tests/test_32_bitstring_compare.ml (from /trunk/tests/32_bitstring_compare.ml:186)
+   A /trunk/tests/test_33_substring.ml (from /trunk/tests/33_substring.ml:186)
+   A /trunk/tests/test_34_takebits.ml (from /trunk/tests/34_takebits.ml:186)
+   A /trunk/tests/test_35_load_from_file.ml (from /trunk/tests/35_load_from_file.ml:186)
+   A /trunk/tests/test_40_endianexpr.ml (from /trunk/tests/40_endianexpr.ml:186)
+   A /trunk/tests/test_50_named_pattern.ml (from /trunk/tests/50_named_pattern.ml:186)
+   A /trunk/tests/test_51_open_pattern.ml (from /trunk/tests/51_open_pattern.ml:186)
+   A /trunk/tests/test_60_simple_offset.ml (from /trunk/tests/60_simple_offset.ml:186)
+   A /trunk/tests/test_61_offset_string.ml (from /trunk/tests/61_offset_string.ml:186)
+   A /trunk/tests/test_62_offset_padding.ml (from /trunk/tests/62_offset_padding.ml:186)
+   A /trunk/tests/test_65_save_offset_to.ml (from /trunk/tests/65_save_offset_to.ml:186)
+   A /trunk/tests/test_70_check_and_bind.ml (from /trunk/tests/70_check_and_bind.ml:186)
+   A /trunk/tests/test_80_hexdump.ml (from /trunk/tests/80_hexdump.ml:186)
+
+Rename test programs so the name is a valid OCaml module name.
+
+
+------------------------------------------------------------------------
+r186 | richard.wm.jones | 2010-02-05 14:01:53 +0000 (Fri, 05 Feb 2010) | 2 lines
+Changed paths:
+   M /trunk/TODO
+
+TODO: Added more suggested features based on feedback from hivex.
+
+------------------------------------------------------------------------
+r185 | richard.wm.jones | 2010-01-11 13:05:01 +0000 (Mon, 11 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/META.in
+
+Fix issue 5: Bitstring cannot be used with other syntax extensions when using ocamlfind
+
+------------------------------------------------------------------------
+r184 | richard.wm.jones | 2010-01-08 15:13:13 +0000 (Fri, 08 Jan 2010) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 2.0.2 for release.
+------------------------------------------------------------------------
+r183 | richard.wm.jones | 2010-01-08 15:10:04 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/configure.ac
+
+Fix handling of OCAML_PKG_* macros for new OCaml autoconf.
+
+------------------------------------------------------------------------
+r182 | richard.wm.jones | 2010-01-08 14:44:42 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 2.0.1 for release.
+
+------------------------------------------------------------------------
+r181 | richard.wm.jones | 2010-01-08 14:43:45 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/cil-tools/ext3.c
+
+CIL example: <linux/fs.h> is now required for <linux/ext3_fs.h>
+
+------------------------------------------------------------------------
+r180 | richard.wm.jones | 2010-01-08 14:43:07 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/cil-tools/Makefile.in
+
+CIL: Include dynlink for OCaml 3.11.
+
+------------------------------------------------------------------------
+r179 | richard.wm.jones | 2010-01-08 14:28:17 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/pa_bitstring.ml
+
+Fix empty case for OCaml 3.11 and above.
+
+------------------------------------------------------------------------
+r178 | richard.wm.jones | 2010-01-08 14:27:38 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+
+Fix handling of dynlink in OCaml 3.11 and above.
+
+------------------------------------------------------------------------
+r177 | richard.wm.jones | 2010-01-08 14:26:23 +0000 (Fri, 08 Jan 2010) | 2 lines
+Changed paths:
+   M /trunk/aclocal.m4
+
+Update aclocal.m4 to latest OCaml autoconf macros.
+
+------------------------------------------------------------------------
+r176 | richard.wm.jones | 2009-07-10 13:22:45 +0100 (Fri, 10 Jul 2009) | 2 lines
+Changed paths:
+   M /trunk/bitstring_c.c
+
+Fix for ARCH_ALIGN_INT64 platforms (Stephane Glondu).
+
+------------------------------------------------------------------------
+r175 | richard.wm.jones | 2008-10-17 09:58:29 +0100 (Fri, 17 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 2.0.0 for release.
+
+------------------------------------------------------------------------
+r174 | richard.wm.jones | 2008-10-17 09:58:16 +0100 (Fri, 17 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+   A /trunk/tests/18_extract_32_64_int.ml
+
+Add regression test for 32/64-bit aligned fastpath extraction.
+
+------------------------------------------------------------------------
+r173 | richard.wm.jones | 2008-10-17 09:57:43 +0100 (Fri, 17 Oct 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitstring.ml
+
+On fastpath, 32/64 bit zeros must be allocated each time (Hans Ole Rafaelsen).
+
+------------------------------------------------------------------------
+r172 | richard.wm.jones | 2008-10-06 09:43:14 +0100 (Mon, 06 Oct 2008) | 1 line
+Changed paths:
+   M /trunk/bitstring.ml
+
+Fix index checks in get/put functions (jessicah)
+------------------------------------------------------------------------
+r171 | toots@rastageeks.org | 2008-08-28 17:44:07 +0100 (Thu, 28 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+   A /trunk/bootstrap
+
+Added bootstrap and uninstall target
+------------------------------------------------------------------------
+r170 | richard.wm.jones | 2008-08-28 10:11:25 +0100 (Thu, 28 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.9 for release.
+------------------------------------------------------------------------
+r169 | richard.wm.jones | 2008-08-27 14:04:46 +0100 (Wed, 27 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/MANIFEST
+
+Updated manifest file.
+------------------------------------------------------------------------
+r168 | richard.wm.jones | 2008-08-27 14:01:46 +0100 (Wed, 27 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/coverage-report/file0000.html
+   M /trunk/coverage-report/file0001.html
+   M /trunk/coverage-report/file0002.html
+   M /trunk/coverage-report/file0003.html
+   M /trunk/coverage-report/index.html
+
+Updated test coverage report.
+------------------------------------------------------------------------
+r167 | richard.wm.jones | 2008-08-27 13:58:25 +0100 (Wed, 27 Aug 2008) | 2 lines
+Changed paths:
+   A /trunk/tests/80_hexdump.ml
+   A /trunk/tests/80_testdata
+   A /trunk/tests/80_testdata/hex1.expected
+   A /trunk/tests/80_testdata/hex10.expected
+   A /trunk/tests/80_testdata/hex1000.expected
+   A /trunk/tests/80_testdata/hex11.expected
+   A /trunk/tests/80_testdata/hex12.expected
+   A /trunk/tests/80_testdata/hex127.expected
+   A /trunk/tests/80_testdata/hex128.expected
+   A /trunk/tests/80_testdata/hex13.expected
+   A /trunk/tests/80_testdata/hex14.expected
+   A /trunk/tests/80_testdata/hex15.expected
+   A /trunk/tests/80_testdata/hex16.expected
+   A /trunk/tests/80_testdata/hex2.expected
+   A /trunk/tests/80_testdata/hex200.expected
+   A /trunk/tests/80_testdata/hex3.expected
+   A /trunk/tests/80_testdata/hex31.expected
+   A /trunk/tests/80_testdata/hex32.expected
+   A /trunk/tests/80_testdata/hex33.expected
+   A /trunk/tests/80_testdata/hex34.expected
+   A /trunk/tests/80_testdata/hex4.expected
+   A /trunk/tests/80_testdata/hex47.expected
+   A /trunk/tests/80_testdata/hex48.expected
+   A /trunk/tests/80_testdata/hex49.expected
+   A /trunk/tests/80_testdata/hex5.expected
+   A /trunk/tests/80_testdata/hex50.expected
+   A /trunk/tests/80_testdata/hex500.expected
+   A /trunk/tests/80_testdata/hex6.expected
+   A /trunk/tests/80_testdata/hex63.expected
+   A /trunk/tests/80_testdata/hex64.expected
+   A /trunk/tests/80_testdata/hex65.expected
+   A /trunk/tests/80_testdata/hex66.expected
+   A /trunk/tests/80_testdata/hex67.expected
+   A /trunk/tests/80_testdata/hex7.expected
+   A /trunk/tests/80_testdata/hex8.expected
+   A /trunk/tests/80_testdata/hex9.expected
+   A /trunk/tests/80_testdata/rnd1
+   A /trunk/tests/80_testdata/rnd10
+   A /trunk/tests/80_testdata/rnd1000
+   A /trunk/tests/80_testdata/rnd11
+   A /trunk/tests/80_testdata/rnd12
+   A /trunk/tests/80_testdata/rnd127
+   A /trunk/tests/80_testdata/rnd128
+   A /trunk/tests/80_testdata/rnd13
+   A /trunk/tests/80_testdata/rnd14
+   A /trunk/tests/80_testdata/rnd15
+   A /trunk/tests/80_testdata/rnd16
+   A /trunk/tests/80_testdata/rnd2
+   A /trunk/tests/80_testdata/rnd200
+   A /trunk/tests/80_testdata/rnd3
+   A /trunk/tests/80_testdata/rnd31
+   A /trunk/tests/80_testdata/rnd32
+   A /trunk/tests/80_testdata/rnd33
+   A /trunk/tests/80_testdata/rnd34
+   A /trunk/tests/80_testdata/rnd4
+   A /trunk/tests/80_testdata/rnd47
+   A /trunk/tests/80_testdata/rnd48
+   A /trunk/tests/80_testdata/rnd49
+   A /trunk/tests/80_testdata/rnd5
+   A /trunk/tests/80_testdata/rnd50
+   A /trunk/tests/80_testdata/rnd500
+   A /trunk/tests/80_testdata/rnd6
+   A /trunk/tests/80_testdata/rnd63
+   A /trunk/tests/80_testdata/rnd64
+   A /trunk/tests/80_testdata/rnd65
+   A /trunk/tests/80_testdata/rnd66
+   A /trunk/tests/80_testdata/rnd67
+   A /trunk/tests/80_testdata/rnd7
+   A /trunk/tests/80_testdata/rnd8
+   A /trunk/tests/80_testdata/rnd9
+
+Test the hexdump function.
+
+------------------------------------------------------------------------
+r166 | richard.wm.jones | 2008-08-27 13:56:49 +0100 (Wed, 27 Aug 2008) | 2 lines
+Changed paths:
+   A /trunk/tests/15_extract_int.ml
+
+Comprehensive test of fixed-size int construct & extract functions.
+
+------------------------------------------------------------------------
+r165 | richard.wm.jones | 2008-08-27 13:56:11 +0100 (Wed, 27 Aug 2008) | 2 lines
+Changed paths:
+   A /trunk/tests/33_substring.ml
+   A /trunk/tests/34_takebits.ml
+
+Test the subbitstring and takebits functions.
+
+------------------------------------------------------------------------
+r164 | richard.wm.jones | 2008-08-27 13:55:34 +0100 (Wed, 27 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/bitstring.ml
+
+Fix buggy construct_int64_ne_unsigned and construct_int64_ee_unsigned functions.
+------------------------------------------------------------------------
+r163 | richard.wm.jones | 2008-08-27 13:54:57 +0100 (Wed, 27 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/bitstring_config.ml.in
+   M /trunk/configure.ac
+
+Check for 'diff' program (now required to run tests).
+
+------------------------------------------------------------------------
+r162 | richard.wm.jones | 2008-08-27 12:28:42 +0100 (Wed, 27 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/coverage-report/file0000.html
+   M /trunk/coverage-report/file0001.html
+   M /trunk/coverage-report/file0002.html
+   M /trunk/coverage-report/file0003.html
+   M /trunk/coverage-report/index.html
+
+Update coverage report.
+------------------------------------------------------------------------
+r161 | richard.wm.jones | 2008-08-27 12:28:18 +0100 (Wed, 27 Aug 2008) | 1 line
+Changed paths:
+   A /trunk/tests/31_bitstring_concat.ml
+   A /trunk/tests/32_bitstring_compare.ml
+   A /trunk/tests/35_load_from_file.ml
+
+Add tests for compare, load, etc.
+------------------------------------------------------------------------
+r160 | richard.wm.jones | 2008-08-27 12:27:47 +0100 (Wed, 27 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+
+Fix 'make test' rule.
+------------------------------------------------------------------------
+r159 | richard.wm.jones | 2008-08-27 12:26:45 +0100 (Wed, 27 Aug 2008) | 6 lines
+Changed paths:
+   M /trunk/bitstring.ml
+   M /trunk/bitstring.mli
+
+Added:
+ - Bitstring.compare, Bitstring.equals
+ - Bitstring.t as a synonym for Bitstring.bitstring type
+ - get and set functions for mutating individual bits (rarely used)
+ - Bitstring.concat
+
+------------------------------------------------------------------------
+r158 | richard.wm.jones | 2008-08-26 15:18:50 +0100 (Tue, 26 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/cil-tools/Makefile.in
+
+'make clean' rules remove more generated files.
+------------------------------------------------------------------------
+r157 | richard.wm.jones | 2008-08-26 10:43:14 +0100 (Tue, 26 Aug 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.8 for release.
+------------------------------------------------------------------------
+r156 | richard.wm.jones | 2008-08-26 10:42:05 +0100 (Tue, 26 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/MANIFEST
+   M /trunk/Makefile.in
+   M /trunk/bitstring.ml
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/configure.ac
+   A /trunk/coverage-report
+   A /trunk/coverage-report/file0000.html
+   A /trunk/coverage-report/file0001.html
+   A /trunk/coverage-report/file0002.html
+   A /trunk/coverage-report/file0003.html
+   A /trunk/coverage-report/index.html
+   A /trunk/coverage-report/style.css
+   M /trunk/tests
+
+Use ocaml-bisect to compute coverage of tests.
+
+------------------------------------------------------------------------
+r155 | richard.wm.jones | 2008-08-26 09:26:23 +0100 (Tue, 26 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+
+Add byteswap.in.h
+
+------------------------------------------------------------------------
+r154 | richard.wm.jones | 2008-08-26 09:25:42 +0100 (Tue, 26 Aug 2008) | 1 line
+Changed paths:
+   M /trunk
+
+Ignore *.so files.
+------------------------------------------------------------------------
+r153 | richard.wm.jones | 2008-08-26 09:24:31 +0100 (Tue, 26 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/bitstring.ml
+   M /trunk/bitstring.mli
+   M /trunk/bitstring_c.c
+   A /trunk/byteswap.in.h
+   M /trunk/configure.ac
+   M /trunk/pa_bitstring.ml
+
+This patch completes the optimization / fastpaths in C enhancement.
+
+------------------------------------------------------------------------
+r152 | richard.wm.jones | 2008-08-26 09:22:42 +0100 (Tue, 26 Aug 2008) | 3 lines
+Changed paths:
+   M /trunk/bitstring.ml
+   M /trunk/bitstring.mli
+   M /trunk/pa_bitstring.ml
+
+This large, but mostly mechanical, patch removes an unnecessary tuple
+allocation from generated code.
+
+------------------------------------------------------------------------
+r151 | richard.wm.jones | 2008-08-26 09:21:43 +0100 (Tue, 26 Aug 2008) | 4 lines
+Changed paths:
+   M /trunk/bitstring_persistent.ml
+
+This patch improves the string_of_* functions in Bitmatch_persistent
+so that they can print (many) expressions.  At the moment they can
+only print stuff like "bind ([expr])" for most expressions.
+
+------------------------------------------------------------------------
+r150 | richard.wm.jones | 2008-08-26 09:20:41 +0100 (Tue, 26 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+   M /trunk/Makefile.in
+   M /trunk/bitstring.ml
+   A /trunk/bitstring_c.c
+
+This patch adds the framework for including C code in bitstring.
+
+------------------------------------------------------------------------
+r149 | richard.wm.jones | 2008-08-26 09:16:01 +0100 (Tue, 26 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+   A /trunk/benchmarks
+   A /trunk/benchmarks/parse_ext3_superblock.ml
+
+Include benchmarks directory.
+
+------------------------------------------------------------------------
+r148 | richard.wm.jones | 2008-08-26 09:13:48 +0100 (Tue, 26 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/configure.ac
+
+This adds the outline of a benchmark suite to bitstring.
+
+------------------------------------------------------------------------
+r147 | richard.wm.jones | 2008-08-26 09:13:07 +0100 (Tue, 26 Aug 2008) | 4 lines
+Changed paths:
+   M /trunk/pa_bitstring.ml
+
+The attached patch is necessary to work around a bug in the parsing in
+OCaml 3.10.0 (fixed in 3.10.2 and later).  It doesn't affect
+performance of the generated code.
+
+------------------------------------------------------------------------
+r146 | richard.wm.jones | 2008-08-20 17:58:33 +0100 (Wed, 20 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/bitstring.ml
+   M /trunk/bitstring.mli
+
+Added little-endian constructors (thanks to Romain Beauxis and Samuel Mimram).
+
+------------------------------------------------------------------------
+r145 | richard.wm.jones | 2008-07-17 16:58:23 +0100 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+
+Document the bitmatch compatibility library.
+------------------------------------------------------------------------
+r142 | richard.wm.jones | 2008-07-17 16:45:56 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.depend
+   M /trunk/MANIFEST
+   M /trunk/META.in
+   M /trunk/Makefile.in
+   M /trunk/README
+   A /trunk/bitmatch.ml
+   M /trunk/bitstring.ml
+   M /trunk/bitstring.mli
+   M /trunk/bitstring_config.ml.in
+   M /trunk/bitstring_objinfo.ml
+   M /trunk/bitstring_persistent.ml
+   M /trunk/bitstring_persistent.mli
+   M /trunk/bitstring_types.ml
+   M /trunk/cil-tools
+   M /trunk/cil-tools/.depend
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/cil-tools/bitstring-import-prefix.h
+   M /trunk/cil-tools/bitstring_import_c.ml
+   M /trunk/cil-tools/ext3.c
+   M /trunk/cil-tools/ext3.ml
+   M /trunk/cil-tools/task_struct.c
+   M /trunk/cil-tools/task_struct.ml
+   M /trunk/configure.ac
+   M /trunk/create_test_pattern.ml
+   M /trunk/examples/elf.ml
+   M /trunk/examples/ext3_superblock.ml
+   M /trunk/examples/gif.ml
+   M /trunk/examples/ipv4_header.ml
+   M /trunk/examples/libpcap.ml
+   M /trunk/examples/make_ipv4_header.ml
+   M /trunk/examples/ping.ml
+   M /trunk/pa_bitstring.ml
+   M /trunk/tests/01_load.ml
+   M /trunk/tests/02_run.ml
+   M /trunk/tests/10_match_bits.ml
+   M /trunk/tests/11_match_ints.ml
+   M /trunk/tests/20_varsize.ml
+   M /trunk/tests/30_bitbuffer.ml
+   M /trunk/tests/40_endianexpr.ml
+   M /trunk/tests/50_named_pattern.ml
+   M /trunk/tests/51_open_pattern.ml
+   M /trunk/tests/60_simple_offset.ml
+   M /trunk/tests/61_offset_string.ml
+   M /trunk/tests/62_offset_padding.ml
+   M /trunk/tests/65_save_offset_to.ml
+   M /trunk/tests/70_check_and_bind.ml
+
+Renaming bitmatch -> bitstring.
+
+------------------------------------------------------------------------
+r141 | richard.wm.jones | 2008-07-17 16:09:05 +0100 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   D /trunk/bitmatch.ml
+   D /trunk/bitmatch.mli
+   D /trunk/bitmatch_config.ml.in
+   D /trunk/bitmatch_objinfo.ml
+   D /trunk/bitmatch_persistent.ml
+   D /trunk/bitmatch_persistent.mli
+   D /trunk/bitmatch_types.ml
+   A /trunk/bitstring.ml (from /trunk/bitmatch.ml:140)
+   A /trunk/bitstring.mli (from /trunk/bitmatch.mli:140)
+   A /trunk/bitstring_config.ml.in (from /trunk/bitmatch_config.ml.in:140)
+   A /trunk/bitstring_objinfo.ml (from /trunk/bitmatch_objinfo.ml:140)
+   A /trunk/bitstring_persistent.ml (from /trunk/bitmatch_persistent.ml:140)
+   A /trunk/bitstring_persistent.mli (from /trunk/bitmatch_persistent.mli:140)
+   A /trunk/bitstring_types.ml (from /trunk/bitmatch_types.ml:140)
+   D /trunk/cil-tools/bitmatch-import-prefix.h
+   D /trunk/cil-tools/bitmatch_import_c.ml
+   A /trunk/cil-tools/bitstring-import-prefix.h (from /trunk/cil-tools/bitmatch-import-prefix.h:140)
+   A /trunk/cil-tools/bitstring_import_c.ml (from /trunk/cil-tools/bitmatch_import_c.ml:140)
+   D /trunk/pa_bitmatch.ml
+   A /trunk/pa_bitstring.ml (from /trunk/pa_bitmatch.ml:140)
+
+Rename files and libraries from bitmatch* to bitstring*
+------------------------------------------------------------------------
+r140 | richard.wm.jones | 2008-07-17 13:10:58 +0100 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/TODO
+
+Updated TODO file.
+------------------------------------------------------------------------
+r139 | richard.wm.jones | 2008-07-17 13:10:05 +0100 (Thu, 17 Jul 2008) | 3 lines
+Changed paths:
+   M /trunk/MANIFEST
+   M /trunk/configure.ac
+
+Version 1.9.6 for release.
+ - Updated MANIFEST.
+
+------------------------------------------------------------------------
+r138 | richard.wm.jones | 2008-07-17 12:58:14 +0100 (Thu, 17 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/tests/70_check_and_bind.ml
+
+Improved test.
+------------------------------------------------------------------------
+r137 | richard.wm.jones | 2008-07-17 12:56:05 +0100 (Thu, 17 Jul 2008) | 3 lines
+Changed paths:
+   M /trunk/bitmatch.mli
+   M /trunk/bitmatch_persistent.ml
+   M /trunk/bitmatch_persistent.mli
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   A /trunk/tests/70_check_and_bind.ml
+
+Implement check() and bind() qualifiers.
+ - Previously check() was called when().
+
+------------------------------------------------------------------------
+r136 | richard.wm.jones | 2008-07-17 12:27:13 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.mli
+   M /trunk/bitmatch_persistent.ml
+   M /trunk/bitmatch_persistent.mli
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   A /trunk/tests/65_save_offset_to.ml
+
+Implement save_to_offset() and partially implement when() and bind().
+
+------------------------------------------------------------------------
+r135 | richard.wm.jones | 2008-07-17 11:33:49 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/tests/62_offset_padding.ml
+
+Fix an error message.
+
+------------------------------------------------------------------------
+r134 | richard.wm.jones | 2008-07-17 09:55:00 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/TODO
+
+Added when(), bind() and save_offset_to() to the TODO list.
+
+------------------------------------------------------------------------
+r133 | richard.wm.jones | 2008-07-17 09:27:01 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/tests
+
+Set svn:ignore.
+
+------------------------------------------------------------------------
+r132 | richard.wm.jones | 2008-07-17 09:26:23 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/cil-tools/ext3.ml
+   M /trunk/cil-tools/task_struct.ml
+   M /trunk/tests/60_simple_offset.ml
+   M /trunk/tests/61_offset_string.ml
+
+Set svn:keywords property to Id.
+
+------------------------------------------------------------------------
+r131 | richard.wm.jones | 2008-07-17 09:25:15 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   A /trunk/tests/62_offset_padding.ml
+
+Added offset padding test to test the case when original_off <> 0.
+
+------------------------------------------------------------------------
+r130 | richard.wm.jones | 2008-07-17 09:24:47 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+
+Implement dropbits, takebits, subbitstring.
+
+------------------------------------------------------------------------
+r129 | richard.wm.jones | 2008-07-17 09:24:20 +0100 (Thu, 17 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Fix computed offset calculations when original_off <> 0.
+
+------------------------------------------------------------------------
+r128 | richard.wm.jones | 2008-07-11 12:10:30 +0100 (Fri, 11 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.5 for release.
+------------------------------------------------------------------------
+r127 | richard.wm.jones | 2008-07-11 12:07:17 +0100 (Fri, 11 Jul 2008) | 1 line
+Changed paths:
+   A /trunk/COPYING
+   M /trunk/COPYING.LIB
+   M /trunk/MANIFEST
+   M /trunk/README
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/bitmatch_config.ml.in
+   M /trunk/bitmatch_objinfo.ml
+   M /trunk/bitmatch_persistent.ml
+   M /trunk/bitmatch_persistent.mli
+   M /trunk/bitmatch_types.ml
+   M /trunk/cil-tools/bitmatch-import-prefix.h
+   M /trunk/cil-tools/bitmatch_import_c.ml
+   M /trunk/create_test_pattern.ml
+   M /trunk/pa_bitmatch.ml
+
+Clarify licensing for Debian.
+------------------------------------------------------------------------
+r126 | richard.wm.jones | 2008-07-11 11:56:31 +0100 (Fri, 11 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Fix documentation for how to compile using camlp4 directly.
+------------------------------------------------------------------------
+r125 | richard.wm.jones | 2008-07-04 14:40:31 +0100 (Fri, 04 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.4 for release.
+------------------------------------------------------------------------
+r124 | richard.wm.jones | 2008-07-04 14:40:07 +0100 (Fri, 04 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/META.in
+   M /trunk/bitmatch.mli
+
+Somewhat better attempt at a META file.
+------------------------------------------------------------------------
+r123 | richard.wm.jones | 2008-07-04 13:35:06 +0100 (Fri, 04 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Don't allow zero-length patterns to be loaded from a file
+------------------------------------------------------------------------
+r122 | richard.wm.jones | 2008-07-04 13:03:21 +0100 (Fri, 04 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/TODO
+
+Update status
+------------------------------------------------------------------------
+r121 | richard.wm.jones | 2008-07-04 12:03:36 +0100 (Fri, 04 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.3 for release.
+------------------------------------------------------------------------
+r120 | richard.wm.jones | 2008-07-04 12:03:17 +0100 (Fri, 04 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+
+Include pkg_*
+------------------------------------------------------------------------
+r119 | richard.wm.jones | 2008-07-01 15:36:25 +0100 (Tue, 01 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/configure.ac
+
+extlib is needed for CIL tools subdir
+------------------------------------------------------------------------
+r118 | richard.wm.jones | 2008-07-01 15:21:45 +0100 (Tue, 01 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/TODO
+
+Note about META file
+------------------------------------------------------------------------
+r117 | richard.wm.jones | 2008-07-01 15:15:18 +0100 (Tue, 01 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/cil-tools/.depend
+   M /trunk/cil-tools/bitmatch_import_c.ml
+
+Allow bitmatch-import-prefix.h to be installed centrally.
+------------------------------------------------------------------------
+r116 | richard.wm.jones | 2008-07-01 15:02:10 +0100 (Tue, 01 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.2 for release.
+------------------------------------------------------------------------
+r115 | richard.wm.jones | 2008-07-01 15:01:47 +0100 (Tue, 01 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/cil-tools/ext3.c
+   M /trunk/cil-tools/ext3.ml
+
+Some fixes for building bmpp file.
+------------------------------------------------------------------------
+r114 | richard.wm.jones | 2008-07-01 13:38:11 +0100 (Tue, 01 Jul 2008) | 1 line
+Changed paths:
+   M /trunk/MANIFEST
+
+Updated MANIFEST
+------------------------------------------------------------------------
+r113 | richard.wm.jones | 2008-07-01 13:37:03 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9.1 for release.
+
+------------------------------------------------------------------------
+r112 | richard.wm.jones | 2008-07-01 13:35:03 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/cil-tools
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/cil-tools/ext3.c
+   A /trunk/cil-tools/ext3.ml
+   M /trunk/cil-tools/task_struct.c
+   A /trunk/cil-tools/task_struct.ml
+
+CIL examples.
+
+------------------------------------------------------------------------
+r111 | richard.wm.jones | 2008-07-01 13:34:31 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/cil-tools/bitmatch_import_c.ml
+
+Just warn about unimplemented types - they can be safely skipped.
+
+------------------------------------------------------------------------
+r110 | richard.wm.jones | 2008-07-01 12:38:46 +0100 (Tue, 01 Jul 2008) | 3 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Refactor raising of Construct_failure exceptions and make the
+locations more precise (Bluestorm & RWMJ).
+
+------------------------------------------------------------------------
+r109 | richard.wm.jones | 2008-07-01 12:26:12 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Make the locations in error messages more specific.
+
+------------------------------------------------------------------------
+r108 | richard.wm.jones | 2008-07-01 12:19:34 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Refactor constructor and extractor function name generation (Bluestorm).
+
+------------------------------------------------------------------------
+r107 | richard.wm.jones | 2008-07-01 12:16:18 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Refactor parse_field function (Bluestorm).
+
+------------------------------------------------------------------------
+r106 | richard.wm.jones | 2008-07-01 12:09:59 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Refactor expr_is_constant (Bluestorm).
+
+------------------------------------------------------------------------
+r105 | richard.wm.jones | 2008-07-01 11:12:58 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/tests
+   A /trunk/tests/61_offset_string.ml
+
+Added string offset tests.
+
+------------------------------------------------------------------------
+r104 | richard.wm.jones | 2008-07-01 10:12:39 +0100 (Tue, 01 Jul 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Convenience function locfail (thanks to Bluestorm).
+
+------------------------------------------------------------------------
+r103 | richard.wm.jones | 2008-06-17 16:33:16 +0100 (Tue, 17 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/cil-tools/bitmatch_import_c.ml
+
+Map 8-bit int element arrays to strings
+------------------------------------------------------------------------
+r102 | richard.wm.jones | 2008-06-17 16:32:27 +0100 (Tue, 17 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/TODO
+
+More items for TODO list
+------------------------------------------------------------------------
+r101 | richard.wm.jones | 2008-06-16 22:37:16 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/cil-tools/.depend
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/cil-tools/bitmatch_import_c.ml
+   M /trunk/cil-tools/ext3.c
+
+Change cil tools to use computed offsets.
+------------------------------------------------------------------------
+r100 | richard.wm.jones | 2008-06-16 22:36:56 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch_persistent.ml
+   M /trunk/bitmatch_persistent.mli
+   M /trunk/pa_bitmatch.ml
+
+Add string_of_*_field so we can print out fields more accurately.
+------------------------------------------------------------------------
+r99 | richard.wm.jones | 2008-06-16 21:34:11 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/.depend
+   M /trunk/Makefile.in
+
+Fix dependencies
+------------------------------------------------------------------------
+r98 | richard.wm.jones | 2008-06-16 21:33:39 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/tests
+   A /trunk/tests/60_simple_offset.ml
+
+Test for offsets
+------------------------------------------------------------------------
+r97 | richard.wm.jones | 2008-06-16 21:33:21 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Document constructed offsets, zeroes_bitstring, ones_bitstring.
+------------------------------------------------------------------------
+r96 | richard.wm.jones | 2008-06-16 21:32:45 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch.ml
+
+Implement construct_bitstring, zeroes_bitstring, ones_bitstring functions.
+------------------------------------------------------------------------
+r95 | richard.wm.jones | 2008-06-16 21:30:24 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Support for computed offsets in output.  Also allow constructed bitstrings of length 0 bits.
+------------------------------------------------------------------------
+r94 | richard.wm.jones | 2008-06-16 21:29:24 +0100 (Mon, 16 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch_persistent.ml
+   M /trunk/bitmatch_persistent.mli
+
+Added computed offset field
+------------------------------------------------------------------------
+r93 | richard.wm.jones | 2008-06-13 21:57:35 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch_persistent.mli
+
+Documentation cleanups
+------------------------------------------------------------------------
+r92 | richard.wm.jones | 2008-06-13 21:56:02 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch_persistent.mli
+
+Documentation cleanups
+------------------------------------------------------------------------
+r91 | richard.wm.jones | 2008-06-13 21:52:06 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Documentation cleanups
+------------------------------------------------------------------------
+r90 | richard.wm.jones | 2008-06-13 21:07:43 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch_persistent.mli
+
+Documentation clarification.
+------------------------------------------------------------------------
+r89 | richard.wm.jones | 2008-06-13 21:06:00 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch_persistent.mli
+
+Clarify how to write multiple patterns to a file
+------------------------------------------------------------------------
+r88 | richard.wm.jones | 2008-06-13 17:04:51 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.9 for release.
+------------------------------------------------------------------------
+r87 | richard.wm.jones | 2008-06-13 16:58:53 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/MANIFEST
+
+Update MANIFEST
+------------------------------------------------------------------------
+r86 | richard.wm.jones | 2008-06-13 16:56:04 +0100 (Fri, 13 Jun 2008) | 1 line
+Changed paths:
+   M /trunk
+   M /trunk/Makefile.in
+   M /trunk/bitmatch.mli
+   M /trunk/bitmatch_config.ml.in
+   A /trunk/bitmatch_objinfo.ml
+   M /trunk/bitmatch_persistent.ml
+   M /trunk/bitmatch_persistent.mli
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/cil-tools/bitmatch-import-prefix.h
+   M /trunk/cil-tools/ext3.c
+   M /trunk/cil-tools/task_struct.c
+   A /trunk/create_test_pattern.ml
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   M /trunk/tests/40_endianexpr.ml
+   A /trunk/tests/50_named_pattern.ml
+   A /trunk/tests/51_open_pattern.ml
+
+Persistent patterns, save and load to a file.
+------------------------------------------------------------------------
+r85 | richard.wm.jones | 2008-06-12 16:46:00 +0100 (Thu, 12 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/.depend
+   M /trunk/Makefile.in
+   A /trunk/bitmatch_persistent.ml
+   A /trunk/bitmatch_persistent.mli
+   M /trunk/pa_bitmatch.ml
+
+Split out field handling from pa_bitmatch into a common library, in preparation for pattern persistence.
+------------------------------------------------------------------------
+r84 | richard.wm.jones | 2008-06-11 16:04:05 +0100 (Wed, 11 Jun 2008) | 3 lines
+Changed paths:
+   M /trunk/cil-tools/Makefile.in
+   M /trunk/cil-tools/bitmatch-import-prefix.h
+   M /trunk/cil-tools/bitmatch_import_c.ml
+   M /trunk/cil-tools/ext3.c
+   A /trunk/cil-tools/task_struct.c
+
+Committing NON-WORKING cil tools directory.  This code all needs
+to be reworked for when we have reusable bitmatch structures.
+
+------------------------------------------------------------------------
+r83 | richard.wm.jones | 2008-06-10 22:50:48 +0100 (Tue, 10 Jun 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/README
+   A /trunk/cil-tools
+   A /trunk/cil-tools/.depend
+   A /trunk/cil-tools/Makefile.in
+   A /trunk/cil-tools/bitmatch-import-prefix.h
+   A /trunk/cil-tools/bitmatch_import_c.ml
+   A /trunk/cil-tools/ext3.c
+   M /trunk/configure.ac
+
+Started to copy the import tool from libunbin.
+------------------------------------------------------------------------
+r81 | richard.wm.jones | 2008-05-21 10:59:21 +0100 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+
+Include CHANGES file in tarball.
+------------------------------------------------------------------------
+r80 | richard.wm.jones | 2008-05-21 10:46:39 +0100 (Wed, 21 May 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+   M /trunk/configure.ac
+
+Version 1.3, updated MANIFEST.
+
+------------------------------------------------------------------------
+r79 | richard.wm.jones | 2008-05-21 09:59:40 +0100 (Wed, 21 May 2008) | 1 line
+Changed paths:
+   M /trunk/TODO
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/examples/libpcap.ml
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   A /trunk/tests/40_endianexpr.ml
+
+Endianness expressions.
+------------------------------------------------------------------------
+r77 | richard.wm.jones | 2008-05-19 10:20:01 +0100 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/MANIFEST
+
+Updated MANIFEST
+------------------------------------------------------------------------
+r76 | richard.wm.jones | 2008-05-19 10:19:27 +0100 (Mon, 19 May 2008) | 1 line
+Changed paths:
+   M /trunk/examples
+   A /trunk/examples/libpcap.ml
+
+Added libpcap parsing example.
+------------------------------------------------------------------------
+r75 | richard.wm.jones | 2008-05-19 09:16:49 +0100 (Mon, 19 May 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+When flen is a constant, use the constant integer value instead of flen expr.
+
+------------------------------------------------------------------------
+r74 | richard.wm.jones | 2008-05-18 23:30:19 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.2 for release.
+------------------------------------------------------------------------
+r73 | richard.wm.jones | 2008-05-18 23:29:50 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/MANIFEST
+
+Updated MANIFEST
+------------------------------------------------------------------------
+r72 | richard.wm.jones | 2008-05-18 23:28:41 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/tests
+   A /trunk/tests/30_bitbuffer.ml
+
+Fix string_of_bitstring/add_bits handling of non-multiple-of-8-bit length strings, and add a test case.
+------------------------------------------------------------------------
+r71 | richard.wm.jones | 2008-05-18 23:27:25 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/tests/11_match_ints.ml
+
+Minor code rearrangement, improve an error message.
+
+------------------------------------------------------------------------
+r70 | richard.wm.jones | 2008-05-18 22:06:15 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/tests
+   A /trunk/tests/11_match_ints.ml
+
+Added integer matching test.
+------------------------------------------------------------------------
+r69 | richard.wm.jones | 2008-05-18 21:54:08 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/tests
+   M /trunk/tests/01_load.ml
+   A /trunk/tests/02_run.ml
+   A /trunk/tests/10_match_bits.ml
+
+Bit-matching test.
+
+------------------------------------------------------------------------
+r68 | richard.wm.jones | 2008-05-18 21:11:19 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/examples/elf.ml
+
+Seems that the ELF fields are little-endian.
+------------------------------------------------------------------------
+r67 | richard.wm.jones | 2008-05-18 21:00:45 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/MANIFEST
+   D /trunk/examples/.cvsignore
+   D /trunk/tests/.cvsignore
+
+Updated MANIFEST and removed .cvsignore files.
+------------------------------------------------------------------------
+r66 | richard.wm.jones | 2008-05-18 20:58:56 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.1 for release.
+------------------------------------------------------------------------
+r65 | richard.wm.jones | 2008-05-18 20:58:17 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/examples
+   A /trunk/examples/gif.ml
+
+Added GIF parsing example.
+------------------------------------------------------------------------
+r64 | richard.wm.jones | 2008-05-18 20:44:58 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/Makefile.in
+   M /trunk/TODO
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/bitmatch_config.ml.in
+   M /trunk/bitmatch_types.ml
+   M /trunk/examples/elf.ml
+   M /trunk/examples/ext3_superblock.ml
+   M /trunk/examples/ipv4_header.ml
+   M /trunk/examples/make_ipv4_header.ml
+   M /trunk/examples/ping.ml
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests/01_load.ml
+   M /trunk/tests/20_varsize.ml
+
+Enable svn:keywords Id property on relevant files.
+------------------------------------------------------------------------
+r63 | richard.wm.jones | 2008-05-18 20:29:03 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/examples
+   A /trunk/examples/elf.ml
+
+ELF parsing example.
+------------------------------------------------------------------------
+r62 | richard.wm.jones | 2008-05-18 20:28:22 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+
+Make examples depend upon library.
+
+------------------------------------------------------------------------
+r61 | richard.wm.jones | 2008-05-18 20:23:13 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   D /trunk/examples/ipv4.ping
+   D /trunk/examples/ipv6.ping
+   A /trunk/examples/ping.ipv4 (from /trunk/examples/ipv4.ping:60)
+   A /trunk/examples/ping.ipv6 (from /trunk/examples/ipv6.ping:60)
+   M /trunk/examples/ping.ml
+
+More consistent naming of files.
+------------------------------------------------------------------------
+r60 | richard.wm.jones | 2008-05-18 20:21:59 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   A /trunk/examples/ext3_sb (from /trunk/tests/ext3_sb:57)
+   A /trunk/examples/ext3_superblock.ml (from /trunk/tests/70_ext3_sb.ml:57)
+   A /trunk/examples/ipv4.ping (from /trunk/tests/ipv4.ping:57)
+   A /trunk/examples/ipv6.ping (from /trunk/tests/ipv6.ping:57)
+   A /trunk/examples/ping.ml (from /trunk/tests/60_ping.ml:57)
+   D /trunk/tests/03_hexdump.ml
+   D /trunk/tests/05_bits.ml
+   D /trunk/tests/06_ints1.ml
+   D /trunk/tests/06_ints2.ml
+   D /trunk/tests/06_ints3.ml
+   D /trunk/tests/10_constr1.ml
+   D /trunk/tests/10_constr2.ml
+   D /trunk/tests/60_ping.ml
+   D /trunk/tests/70_ext3_sb.ml
+   D /trunk/tests/ext3_sb
+   D /trunk/tests/ipv4.ping
+   D /trunk/tests/ipv6.ping
+
+Removed obsolete tests, and moved some tests into examples.
+
+------------------------------------------------------------------------
+r59 | richard.wm.jones | 2008-05-18 20:05:08 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/examples
+
+Fix svnignore in the examples subdirectory.
+
+------------------------------------------------------------------------
+r58 | richard.wm.jones | 2008-05-18 20:03:58 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/Makefile.in
+   M /trunk/README
+
+Added rules to build examples.
+
+------------------------------------------------------------------------
+r57 | richard.wm.jones | 2008-05-18 20:03:22 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/examples/make_ipv4_header.ml
+
+Fix this example so it now works.
+
+------------------------------------------------------------------------
+r56 | richard.wm.jones | 2008-05-18 20:02:54 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+
+Implement bitstring_to_chan, bitstring_to_file.
+
+------------------------------------------------------------------------
+r55 | richard.wm.jones | 2008-05-18 19:32:01 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.depend
+   M /trunk/MANIFEST
+   M /trunk/Makefile.in
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   A /trunk/bitmatch_config.ml.in
+   A /trunk/bitmatch_types.ml
+   M /trunk/configure.ac
+   M /trunk/pa_bitmatch.ml
+
+Implement the nativeendian version of some functions.
+
+------------------------------------------------------------------------
+r54 | richard.wm.jones | 2008-05-18 19:30:08 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/examples/ipv4_header.ml
+   M /trunk/examples/make_ipv4_header.ml
+
+Fix examples to use the new syntax.
+
+------------------------------------------------------------------------
+r53 | richard.wm.jones | 2008-05-18 17:42:38 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/TODO
+
+Updated TODO
+------------------------------------------------------------------------
+r52 | richard.wm.jones | 2008-05-18 17:13:50 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 1.0 for release.
+
+------------------------------------------------------------------------
+r51 | richard.wm.jones | 2008-05-18 17:13:09 +0100 (Sun, 18 May 2008) | 1 line
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Allow '_' to be used to ignore more types of bitstring when matching.
+------------------------------------------------------------------------
+r50 | richard.wm.jones | 2008-05-18 17:03:04 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+   M /trunk/Makefile.in
+
+Fix check-manifest rule to work with Subversion.
+
+------------------------------------------------------------------------
+r49 | richard.wm.jones | 2008-05-18 16:52:49 +0100 (Sun, 18 May 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Polymorphic 'field' type.
+
+------------------------------------------------------------------------
+r48 | richard.wm.jones | 2008-05-18 16:39:29 +0100 (Sun, 18 May 2008) | 5 lines
+Changed paths:
+   M /trunk
+   D /trunk/.cvsignore
+   M /trunk/TODO
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+
+More complete handling of constant field length expressions.
+More TODO line items.
+Set svnignore and remove old cvsignore file.
+Fix link to bitmatch home page.
+
+------------------------------------------------------------------------
+r47 | rjones | 2008-05-12 21:32:55 +0100 (Mon, 12 May 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/configure.ac
+
+Fix extracting in little-endian case.
+
+------------------------------------------------------------------------
+r46 | rjones | 2008-05-08 22:28:28 +0100 (Thu, 08 May 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/configure.ac
+
+Added extract_int64_le_unsigned, version 0.8 for release.
+
+------------------------------------------------------------------------
+r45 | rjones | 2008-05-07 15:56:53 +0100 (Wed, 07 May 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+
+Missing exception arg to construct_bit, and added construct_int32_be_unsigned.
+
+------------------------------------------------------------------------
+r44 | rjones | 2008-05-07 15:41:03 +0100 (Wed, 07 May 2008) | 2 lines
+Changed paths:
+   M /trunk/META.in
+   M /trunk/Makefile.in
+
+Requires unix - new version 0.7 candidate for release.
+
+------------------------------------------------------------------------
+r43 | rjones | 2008-05-07 15:37:00 +0100 (Wed, 07 May 2008) | 2 lines
+Changed paths:
+   M /trunk/TODO
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/configure.ac
+
+Added construct_string, version 0.7 for release.
+
+------------------------------------------------------------------------
+r42 | rjones | 2008-04-26 21:35:02 +0100 (Sat, 26 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+
+bitstring_of_string and bitstring_of_*_max functions.
+
+------------------------------------------------------------------------
+r41 | rjones | 2008-04-25 16:07:30 +0100 (Fri, 25 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 0.6 for release.
+
+------------------------------------------------------------------------
+r40 | rjones | 2008-04-25 15:57:11 +0100 (Fri, 25 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Turn off exhaustiveness checking (thanks: Martin Jambon).
+
+------------------------------------------------------------------------
+r39 | rjones | 2008-04-25 13:55:39 +0100 (Fri, 25 Apr 2008) | 3 lines
+Changed paths:
+   M /trunk/TODO
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests/70_ext3_sb.ml
+
+Allow matching against a string type.
+Error locations are now very fine-grained.
+
+------------------------------------------------------------------------
+r38 | rjones | 2008-04-25 13:08:51 +0100 (Fri, 25 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/TODO
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+
+Use patterns, not expressions, in the bitmatch operator.
+
+------------------------------------------------------------------------
+r37 | rjones | 2008-04-25 12:08:43 +0100 (Fri, 25 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/TODO
+   M /trunk/bitmatch.mli
+   M /trunk/configure.ac
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests/05_bits.ml
+   M /trunk/tests/06_ints1.ml
+   M /trunk/tests/06_ints2.ml
+   M /trunk/tests/06_ints3.ml
+   M /trunk/tests/10_constr1.ml
+   M /trunk/tests/10_constr2.ml
+   M /trunk/tests/20_varsize.ml
+   M /trunk/tests/60_ping.ml
+   M /trunk/tests/70_ext3_sb.ml
+
+Change syntax so that { ... } surrounds match patterns.
+
+------------------------------------------------------------------------
+r36 | rjones | 2008-04-25 11:44:00 +0100 (Fri, 25 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Typo.
+
+------------------------------------------------------------------------
+r35 | rjones | 2008-04-16 12:14:40 +0100 (Wed, 16 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+
+Added TODO to MANIFEST.
+
+------------------------------------------------------------------------
+r34 | rjones | 2008-04-15 14:41:21 +0100 (Tue, 15 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 0.4.
+
+------------------------------------------------------------------------
+r33 | rjones | 2008-04-15 14:41:14 +0100 (Tue, 15 Apr 2008) | 2 lines
+Changed paths:
+   A /trunk/TODO
+
+Added TODO file.
+
+------------------------------------------------------------------------
+r32 | rjones | 2008-04-15 14:40:51 +0100 (Tue, 15 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+
+string_of_bitstring.
+
+------------------------------------------------------------------------
+r31 | rjones | 2008-04-02 14:59:47 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/META.in
+
+Some fixes to the META file, still doesn't work.
+
+------------------------------------------------------------------------
+r30 | rjones | 2008-04-02 14:59:37 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Fixed 'compiling' documentation.
+
+------------------------------------------------------------------------
+r29 | rjones | 2008-04-02 14:22:46 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+
+Install pa_bitmatch.cmo, don't install pa_bitmatch.cmi, distribute config.h.in.
+
+------------------------------------------------------------------------
+r28 | rjones | 2008-04-02 14:22:07 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Documentation update
+
+------------------------------------------------------------------------
+r27 | rjones | 2008-04-02 13:36:43 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/configure.ac
+
+Version 0.2 released.
+
+------------------------------------------------------------------------
+r26 | rjones | 2008-04-02 13:31:46 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+
+Updated MANIFEST.
+
+------------------------------------------------------------------------
+r25 | rjones | 2008-04-02 13:29:03 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Updated documentation.
+
+------------------------------------------------------------------------
+r24 | rjones | 2008-04-02 12:06:31 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.mli
+
+Start of documentation.
+
+------------------------------------------------------------------------
+r23 | rjones | 2008-04-02 12:06:21 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/tests
+   M /trunk/tests/.cvsignore
+
+Update cvsignore.
+
+------------------------------------------------------------------------
+r22 | rjones | 2008-04-02 12:06:07 +0100 (Wed, 02 Apr 2008) | 3 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   A /trunk/tests/10_constr2.ml
+
+Move more common bithandling code into I/I32/I64 modules.
+Fix constructor functions.
+
+------------------------------------------------------------------------
+r21 | rjones | 2008-04-02 09:14:40 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.cvsignore
+   M /trunk/Makefile.in
+   M /trunk/README
+   M /trunk/bitmatch.mli
+
+Outline of documentation.
+
+------------------------------------------------------------------------
+r20 | rjones | 2008-04-02 09:05:58 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+
+LGPL notices.
+
+------------------------------------------------------------------------
+r19 | rjones | 2008-04-02 09:03:26 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile.in
+
+Makefile make install/clean.
+
+------------------------------------------------------------------------
+r18 | rjones | 2008-04-02 09:03:03 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   A /trunk/README
+
+Added README
+
+------------------------------------------------------------------------
+r17 | rjones | 2008-04-02 09:02:52 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/MANIFEST
+
+Updated MANIFEST
+
+------------------------------------------------------------------------
+r16 | rjones | 2008-04-02 09:02:44 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/META.in
+
+META file
+
+------------------------------------------------------------------------
+r15 | rjones | 2008-04-02 08:20:26 +0100 (Wed, 02 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.cvsignore
+   A /trunk/COPYING.LIB
+   A /trunk/META.in
+   D /trunk/Makefile
+   A /trunk/Makefile.in
+   A /trunk/aclocal.m4
+   A /trunk/configure.ac
+   A /trunk/install-sh
+
+Autoconfify.
+
+------------------------------------------------------------------------
+r14 | rjones | 2008-04-01 23:19:59 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.cvsignore
+
+Ignore tarballs
+
+------------------------------------------------------------------------
+r13 | rjones | 2008-04-01 23:18:24 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   A /trunk/MANIFEST
+   M /trunk/Makefile
+
+Added MANIFEST, distribution rule.
+
+------------------------------------------------------------------------
+r12 | rjones | 2008-04-01 20:10:45 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   M /trunk/tests/.cvsignore
+   A /trunk/tests/70_ext3_sb.ml
+   A /trunk/tests/ext3_sb
+
+Fixed byte swaps so that now ext3 superblock can be parsed.
+
+------------------------------------------------------------------------
+r11 | rjones | 2008-04-01 18:31:12 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/examples/ipv4_header.ml
+   M /trunk/examples/make_ipv4_header.ml
+
+Fixed syntax of the examples.
+
+------------------------------------------------------------------------
+r10 | rjones | 2008-04-01 18:05:37 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   M /trunk/tests/.cvsignore
+   A /trunk/tests/10_constr1.ml
+   A /trunk/tests/20_varsize.ml
+
+Added constructors.
+
+------------------------------------------------------------------------
+r9 | rjones | 2008-04-01 16:22:46 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/tests/60_ping.ml
+
+Now supports constant field patterns in bitmatch.
+
+------------------------------------------------------------------------
+r8 | rjones | 2008-04-01 11:58:53 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   A /trunk/tests/60_ping.ml
+
+Added extract_int_be_unsigned and extract_int32_be_unsigned.
+
+------------------------------------------------------------------------
+r7 | rjones | 2008-04-01 11:58:35 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/tests/ipv4.ping
+   M /trunk/tests/ipv6.ping
+
+Fix corrupted IPv4/6 packets.
+
+------------------------------------------------------------------------
+r6 | rjones | 2008-04-01 11:06:37 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   A /trunk/tests/ipv4.ping
+   A /trunk/tests/ipv6.ping
+
+Added IPv4 and IPv6 ping packets.
+
+------------------------------------------------------------------------
+r5 | rjones | 2008-04-01 11:06:12 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/tests
+   M /trunk/tests/.cvsignore
+   A /trunk/tests/03_hexdump.ml
+
+Added Bitmatch.hexdump_bitstring
+
+------------------------------------------------------------------------
+r4 | rjones | 2008-04-01 11:05:14 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/pa_bitmatch.ml
+
+Avoid compiler warning from 'raise Exit; ()'
+
+------------------------------------------------------------------------
+r3 | rjones | 2008-04-01 09:56:43 +0100 (Tue, 01 Apr 2008) | 2 lines
+Changed paths:
+   M /trunk/Makefile
+   M /trunk/bitmatch.ml
+   M /trunk/bitmatch.mli
+   M /trunk/pa_bitmatch.ml
+   M /trunk/tests
+   M /trunk/tests/.cvsignore
+   M /trunk/tests/05_bits.ml
+   A /trunk/tests/06_ints1.ml
+   A /trunk/tests/06_ints2.ml
+   A /trunk/tests/06_ints3.ml
+
+extract_char_unsigned
+
+------------------------------------------------------------------------
+r2 | rjones | 2008-03-31 23:52:17 +0100 (Mon, 31 Mar 2008) | 2 lines
+Changed paths:
+   M /trunk
+   A /trunk/.cvsignore
+   A /trunk/.depend
+   A /trunk/Makefile
+   A /trunk/bitmatch.ml
+   A /trunk/bitmatch.mli
+   A /trunk/examples
+   A /trunk/examples/.cvsignore
+   A /trunk/examples/ipv4_header.ml
+   A /trunk/examples/make_ipv4_header.ml
+   A /trunk/pa_bitmatch.ml
+   A /trunk/tests
+   A /trunk/tests/.cvsignore
+   A /trunk/tests/01_load.ml
+   A /trunk/tests/05_bits.ml
+
+Bitmatch syntax extension, working on bits and bitstrings.
+
+------------------------------------------------------------------------
+r1 | (no author) | 2008-03-31 23:52:17 +0100 (Mon, 31 Mar 2008) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+
+New repository initialized by cvs2svn.
+------------------------------------------------------------------------

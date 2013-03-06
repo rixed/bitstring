@@ -1,0 +1,13 @@
+.depend
+configure
+coverage-report
+autom4te.cache
+META
+Makefile
+bitstring-objinfo
+bitstring_config.ml
+config.h
+config.log
+config.status
+*.so
+*.a
