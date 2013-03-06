@@ -791,7 +791,7 @@ module Buffer = struct
     (* XXX We have almost enough information in the generator to
      * choose a good initial size.
      *)
-    { buf = Buffer.create 128; len = 0; last = 0 }
+    { buf = Buffer.create 2000; len = 0; last = 0 }
 
   let contents { buf = buf; len = len; last = last } =
     let data =
