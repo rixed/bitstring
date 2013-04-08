@@ -72,9 +72,6 @@ AC_CHECK_OCAML_PKG(cil)
 
 dnl Check for /usr/bin/time and get full path.
 AC_PATH_PROG(TIME,time,no)
-if test "x$TIME" = "xno"; then
-    AC_MSG_ERROR(['time' command not found])
-fi
 
 dnl Check for diff and get full path.
 AC_PATH_PROG(DIFF,diff,no)
